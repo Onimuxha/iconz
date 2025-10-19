@@ -78,6 +78,7 @@ export const SelectedIcon = () => {
 
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
+    if (!ctx) return
     const v = canvg.fromString(ctx, iconString)
     v.render()
     const img = canvas.toDataURL('image/png')
@@ -218,7 +219,7 @@ const Button = ({ name: _name, handleClick }: IButton) => {
       onClick={onClickHandler}
       className="flex-1 flex items-center justify-center gap-1 border-2 border-border active:border-primary transition-all  rounded-lg"
     >
-      <Icon color={copied ? '#37d67a' : '#FF8A65'} variant="Bulk" size="22" />
+      <Icon color={copied ? '#37d67a' : '#8B5CF6'} variant="Bulk" size="22" />
       <span>{copied ? 'copied!' : name[1]}</span>
     </button>
   )

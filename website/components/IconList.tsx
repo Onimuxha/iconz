@@ -9,7 +9,7 @@ const Empty = () => {
   return (
     <div className="w-full flex gap-4 flex-col justify-start items-center">
       <span>
-        <EmojiSad color="#FF8A65" variant="Bulk" size="90" />
+        <EmojiSad color="#8B5CF6" variant="Bulk" size="90" />
       </span>
       <span>Nothing Found</span>
     </div>

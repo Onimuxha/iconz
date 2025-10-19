@@ -13,8 +13,7 @@ module.exports = {
         '-1': '-1',
       },
       colors: {
-        // primary: 'rgba(139, 92, 246)',
-        primary: '#FF8A65',
+        primary: '#8B5CF6',
         bg: '#0F0F0F',
         card: '#151515',
         border: '#1d1d1d',
