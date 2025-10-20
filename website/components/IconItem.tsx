@@ -29,7 +29,7 @@ export const IconItem = ({ Icon, name }: { Icon: Icon; name: string }) => {
     gsap
       .to(ref.current, {
         translateY: '-2px',
-        borderColor: '#8B5CF6',
+        borderColor: '#37D67A',
         duration,
       })
       .play()

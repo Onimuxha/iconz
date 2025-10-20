@@ -9,7 +9,7 @@ const Empty = () => {
   return (
     <div className="w-full flex gap-4 flex-col justify-start items-center">
       <span>
-        <EmojiSad color="#8B5CF6" variant="Bulk" size="90" />
+        <EmojiSad color="#37D67A" variant="Bulk" size="90" />
       </span>
       <span>Nothing Found</span>
     </div>
@@ -74,7 +74,11 @@ export const IconList = () => {
                               return null
                             }
                             return (
-                              <IconItem name={icon.name} Icon={icon.Icon} />
+                              <IconItem
+                                key={`${rowIndex}-${columnIndex}-${icon.name}`}
+                                name={icon.name}
+                                Icon={icon.Icon}
+                              />
                             )
                           }
                         )}

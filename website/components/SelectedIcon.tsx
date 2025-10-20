@@ -219,7 +219,7 @@ const Button = ({ name: _name, handleClick }: IButton) => {
       onClick={onClickHandler}
       className="flex-1 flex items-center justify-center gap-1 border-2 border-border active:border-primary transition-all  rounded-lg"
     >
-      <Icon color={copied ? '#37d67a' : '#8B5CF6'} variant="Bulk" size="22" />
+      <Icon color={copied ? '#37d67a' : '#37D67A'} variant="Bulk" size="22" />
       <span>{copied ? 'copied!' : name[1]}</span>
     </button>
   )

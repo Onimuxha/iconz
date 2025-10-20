@@ -22,7 +22,7 @@ export interface IconState {
 const initialValue: IconState = {
   search: '',
   size: 32,
-  color: '#8B5CF6',
+  color: '#37D67A',
   variant: 'Linear',
 }
 const Context = createContext<{
