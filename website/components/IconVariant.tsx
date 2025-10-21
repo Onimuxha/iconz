@@ -4,6 +4,7 @@ import { useWindowSize } from '../hooks'
 import { useIconContext, Variants } from '../store'
 import { IconState, VariantType } from '../store/IconContext'
 import { IconAction } from '../store/iconReducer'
+import { Happyemoji } from 'iconsax-reactjs'
 
 interface ListProps {
   state: IconState
@@ -20,11 +21,12 @@ const MenuList = ({ state, dispatch }: ListProps) => {
               dispatch({ type: 'CHANGE_VARIANT', payload: variant })
             }
             className={`px-1 xs:px-4 cursor-pointer grid place-items-center transition-colors duration-300 ${
-              variant === state.variant ? 'bg-primary text-white' : 'bg-card'
+              variant === state.variant ? 'bg-gray-500/30 text-white' : 'bg-card'
             }`}
             key={variant}
           >
-            {variant}
+            {/* {variant} */}
+            <Happyemoji  variant={variant} size={24} />
           </span>
         ))}
       </div>

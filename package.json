@@ -1,16 +1,12 @@
 {
-  "name": "iconsax",
-  "description": "iconsax for react and react native",
+  "name": "piktoza",
+  "description": "piktoza for react and react native",
   "private": true,
   "workspaces": {
     "packages": [
       "packages/*",
       "website"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rendinjast/iconsax-react.git"
   },
   "version": "0.0.8",
   "scripts": {

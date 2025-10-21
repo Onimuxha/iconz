@@ -5,39 +5,38 @@ import { searchStore } from '../store'
 import { EmojiSad } from 'iconsax-reactjs'
 import { AutoSizer, List, WindowScroller } from 'react-virtualized'
 
-const Empty = () => {
-  return (
-    <div className="w-full flex gap-4 flex-col justify-start items-center">
-      <span>
-        <EmojiSad color="#37D67A" variant="Bulk" size="90" />
-      </span>
-      <span>Nothing Found</span>
-    </div>
-  )
-}
+const Empty = () => (
+  <div className="w-full flex gap-4 flex-col justify-start items-center">
+    <span>
+      <EmojiSad color="#37D67A" variant="Bulk" size="90" />
+    </span>
+    <span>Nothing Found</span>
+  </div>
+)
+
 const ICON_CONTAINER_SIZE = 150
 
 export const IconList = () => {
   const [filtered, setFiltered] = useState<IIconsArray[]>(icons)
   const [numColumns, setNumColumns] = useState(1)
-
+  const [mounted, setMounted] = useState(false)
   const query = searchStore((state) => state.query)
+  useEffect(() => {
+    setMounted(true) 
+  }, [])
 
   const onResize = ({ width }: { width: number }) => {
-    if (width <= 576) {
-      setNumColumns(Math.floor(width / ICON_CONTAINER_SIZE))
-    } else {
-      setNumColumns(Math.floor(width / ICON_CONTAINER_SIZE))
-    }
+    setNumColumns(Math.max(Math.floor(width / ICON_CONTAINER_SIZE), 1))
   }
+
   useEffect(() => {
-    console.log(query)
     const f =
       icons.filter((x) =>
         x.name.toLowerCase().includes(query!.toLowerCase())
       ) || []
     setFiltered(f)
   }, [query])
+  if (!mounted) return null // <== skip SSR mismatch
   return (
     <div className="container flex justify-center m-auto min-h-[400px]">
       <div className="w-full relative mb-10">
@@ -62,6 +61,7 @@ export const IconList = () => {
                         className="grid place-items-center"
                         style={{
                           ...style,
+                          display: 'grid',
                           gridTemplateColumns: `repeat(${numColumns}, 1fr)`,
                         }}
                       >
@@ -70,9 +70,7 @@ export const IconList = () => {
                           (_, columnIndex) => {
                             const icon =
                               filtered[rowIndex * numColumns + columnIndex]
-                            if (!icon) {
-                              return null
-                            }
+                            if (!icon) return null
                             return (
                               <IconItem
                                 key={`${rowIndex}-${columnIndex}-${icon.name}`}

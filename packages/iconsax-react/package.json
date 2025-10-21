@@ -1,17 +1,9 @@
 {
-  "name": "iconsax-reactjs",
+  "name": "piktoza-reactjs",
   "version": "0.0.8",
-  "description": "Iconsax icon pack for React",
+  "description": "Piktoza icon pack for React",
   "author": "Erfan Khadivar <rendinjast@gmail.com>",
-  "homepage": "https://iconsax.erfan.ee",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rendinjast/iconsax-react.git",
-    "directory": "packages/iconsax-react"
-  },
-  "bugs": {
-    "url": "https://github.com/rendinjast/iconsax-react/issues"
-  },
+  "homepage": "https://piktoza.pages.dev/",
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +21,7 @@
     "icons",
     "react",
     "icon components",
-    "iconsax"
+    "piktoza"
   ],
   "files": [
     "dist"

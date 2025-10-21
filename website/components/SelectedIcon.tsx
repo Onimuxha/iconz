@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver'
 import copy from 'copy-to-clipboard'
 import canvg from 'canvg'
 import gsap from 'gsap'
-import { ClipboardText, CloseCircle, Import } from 'iconsax-reactjs'
+import { ClipboardText, CloseCircle, ImportCurve } from 'iconsax-reactjs'
 import { useOnClickOutside } from '../hooks'
 import { selectedStore, useIconContext } from '../store'
 
@@ -95,7 +95,7 @@ export const SelectedIcon = () => {
           <div className="flex justify-between items-center">
             <span className="font-bold text-md">{selected?.name}</span>
             <span className="cursor-pointer" onClick={handleClose}>
-              <CloseCircle color="white" />
+              <CloseCircle className='text-primary' variant='TwoTone' />
             </span>
           </div>
           <div className="flex gap-1 mt-3">
@@ -201,7 +201,7 @@ const Button = ({ name: _name, handleClick }: IButton) => {
   const { state } = useIconContext()
   const [copied, setCopied] = useState(false)
   const name = _name.split('#')
-  const Icon = name[0] === 'download' ? Import : ClipboardText
+  const Icon = name[0] === 'download' ? ImportCurve : ClipboardText
   const onClickHandler = () => {
     if (name[0] === 'copy') {
       console.log('erfan khadivar hastam ')
@@ -219,7 +219,7 @@ const Button = ({ name: _name, handleClick }: IButton) => {
       onClick={onClickHandler}
       className="flex-1 flex items-center justify-center gap-1 border-2 border-border active:border-primary transition-all  rounded-lg"
     >
-      <Icon color={copied ? '#37d67a' : '#37D67A'} variant="Bulk" size="22" />
+      <Icon color={copied ? '#37d67a' : '#37D67A'} variant="TwoTone" size="22" />
       <span>{copied ? 'copied!' : name[1]}</span>
     </button>
   )

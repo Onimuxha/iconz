@@ -1,4 +1,4 @@
-<h1 align="center">iconsax for React and React Native</h1>
+<h1 align="center">piktoza for React and React Native</h1>
 
 <p align="center">
   1000 icons in 6 different styles, total 6000 icons | 
@@ -6,9 +6,9 @@ Perfectly balance |
 24px grid-based
 <p>
 
-<p align="center">
-  <a href="https://iconsax.erfan.ee/"><strong>Browse icons at site</strong></a>
-</p>
+  <p align="center">
+    <a href="https://piktoza.pages.dev/"><strong>Browse icons at site</strong></a>
+  </p>
 <br>
 <br>
 
@@ -17,25 +17,25 @@ Perfectly balance |
 ### React
 
 ```bash
-yarn add iconsax-reactjs
+yarn add piktoza-reactjs
 # or
-npm i iconsax-reactjs
+npm i piktoza-reactjs
 ```
 
 ### React Native
 
 ```bash
-yarn add iconsax-react-nativejs react-native-svg
+yarn add piktoza-react-nativejs react-native-svg
 # or
-npm i iconsax-react-nativejs react-native-svg
+npm i piktoza-react-nativejs react-native-svg
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react';
-//import icon. for React Native import from 'iconsax-react-nativejs'
-import { EmojiHappy } from 'iconsax-reactjs';
+//import icon. for React Native import from 'piktoza-react-nativejs'
+import { EmojiHappy } from 'piktoza-reactjs';
 
 const Example = () => {
   // then use it as a normal React Component

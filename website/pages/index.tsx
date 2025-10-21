@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className="font-sans text-gray-50">
       <Head>
-        <title>Iconsax React</title>
+        <title>Piktoza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0F0F0F" />
 
